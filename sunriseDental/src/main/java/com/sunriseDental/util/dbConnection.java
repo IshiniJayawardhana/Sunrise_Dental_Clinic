@@ -11,9 +11,9 @@ import java.util.Properties;
 public final class dbConnection {
 
     private static final String CONFIG_FILE = "db.properties";
-    private static String url;
-    private static String username;
-    private static String password;
+    private static String url="jdbc:mysql://localhost:3306/sunrise_dental?useSSL=false&serverTimezone=UTC";
+    private static String username="root";
+    private static String password="1234";
 
     static {
         Properties props = new Properties();
