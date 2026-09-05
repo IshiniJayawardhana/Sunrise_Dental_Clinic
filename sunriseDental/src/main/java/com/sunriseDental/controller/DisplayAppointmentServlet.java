@@ -1,6 +1,6 @@
 package com.sunriseDental.controller;
 
-import com.sunriseDental.dao.AppointmentStore;
+import com.sunriseDental.Dao.AppointmentStore;
 import com.sunriseDental.model.Appointment;
 
 import javax.servlet.RequestDispatcher;

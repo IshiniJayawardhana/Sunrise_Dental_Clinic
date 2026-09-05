@@ -6,16 +6,7 @@ package com.sunriseDental.Dao;
 	import java.util.concurrent.ConcurrentHashMap;
 	import java.util.concurrent.atomic.AtomicInteger;
 
-	/**
-	 * Temporary in-memory "database" so the app is fully functional out of the box.
-	 *a
-	 * IMPORTANT: This resets whenever the server restarts and is not safe for a real
-	 * multi-user production deployment. Replace the internal Map with real JDBC
-	 * calls (e.g. DriverManager / a connection pool + SQL against an `appointments`
-	 * table) when you're ready to persist data properly. The method signatures
-	 * below are intentionally the only thing the servlets depend on, so that swap
-	 * should not require touching any servlet code.
-	 */
+	
 	public final class AppointmentStore {
 
 	    private static final Map<String, Appointment> APPOINTMENTS = new ConcurrentHashMap<>();
@@ -66,4 +57,4 @@ package com.sunriseDental.Dao;
 	    }
 	}
 
-}
+

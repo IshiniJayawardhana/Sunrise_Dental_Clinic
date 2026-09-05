@@ -11,7 +11,6 @@ import java.util.Properties;
 public final class dbConnection {
 
     private static final String CONFIG_FILE = "db.properties";
-
     private static String url;
     private static String username;
     private static String password;
@@ -35,9 +34,7 @@ public final class dbConnection {
                 throw new RuntimeException("db.properties is missing db.driver or db.url");
             }
 
-            // Loads and registers the JDBC driver class (e.g. com.mysql.cj.jdbc.Driver).
-            // Not strictly required on JDBC 4+ drivers with a proper META-INF/services
-            // entry, but explicit loading avoids surprises across servlet containers.
+            // Loads and registers the JDBC driver class
             Class.forName(driver);
 
         } catch (IOException e) {
