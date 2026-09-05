@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
-    // If already logged in, skip straight to the dashboard
-    if (session.getAttribute("role") != null) {
+     if (session.getAttribute("role") != null) {
         response.sendRedirect(request.getContextPath() + "/main-menu.jsp");
         return;
     }
 
-    // Optional error flag passed back from the login servlet, e.g. login.jsp?error=1
-    String error = request.getParameter("error");
+     String error = request.getParameter("error");
 %>
 <!DOCTYPE html>
 <html lang="en">

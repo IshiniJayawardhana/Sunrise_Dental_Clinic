@@ -9,10 +9,7 @@ package com.sunriseDental.controller;
 	import javax.servlet.http.HttpSession;
 	import java.io.IOException;
 
-	/**
-	 * Invalidates the current session and sends the user back to the login page.
-	 * Mapped from the "Logout" button in main-menu.jsp (and any other page's navbar).
-	 */
+	
 	@WebServlet("/LogoutServlet")
 	public class LogoutServlet extends HttpServlet {
 

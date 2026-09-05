@@ -1,14 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
-    // Require login
-    String role = (String) session.getAttribute("role");
+     String role = (String) session.getAttribute("role");
     if (role == null || role.trim().isEmpty()) {
         response.sendRedirect(request.getContextPath() + "/login.jsp");
         return;
     }
 
-    // Auto-generate the next Appointment Number.
-    // Replace this with a real lookup (e.g. MAX(id)+1 from the database) once the DB layer is wired up.
     int nextNumber = 1004;
     Object counter = application.getAttribute("appointmentCounter");
     if (counter != null) {

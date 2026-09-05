@@ -13,7 +13,7 @@ package com.sunriseDental.Dao;
 	    private static final AtomicInteger NEXT_NUMBER = new AtomicInteger(1004);
 
 	    static {
-	        // Seed data so Display/Bill have something to find out of the box.
+	        
 	        Appointment demo = new Appointment(
 	                "APP-1001",
 	                "John Doe",
@@ -29,10 +29,10 @@ package com.sunriseDental.Dao;
 	    }
 
 	    private AppointmentStore() {
-	        // static utility class
+	        
 	    }
 
-	    /** Generates the next sequential appointment ID, e.g. APP-1005. */
+	  
 	    public static synchronized String nextAppointmentId() {
 	        return "APP-" + NEXT_NUMBER.getAndIncrement();
 	    }
@@ -44,7 +44,7 @@ package com.sunriseDental.Dao;
 	        }
 	    }
 
-	    /** Looks up an appointment by ID; returns null if not found or id is blank. */
+	   
 	    public static Appointment find(String appointmentId) {
 	        if (appointmentId == null || appointmentId.trim().isEmpty()) {
 	            return null;

@@ -7,8 +7,6 @@
         return;
     }
 
-    // Preserve whatever the user searched for so the field doesn't clear on submit.
-    // Replace the sample invoice below with a real DB lookup keyed on searchId.
     String searchId = request.getParameter("searchId");
     if (searchId == null) {
         searchId = "";

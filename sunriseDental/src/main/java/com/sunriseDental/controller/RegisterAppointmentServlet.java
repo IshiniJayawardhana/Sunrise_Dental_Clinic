@@ -18,11 +18,7 @@ import java.nio.charset.StandardCharsets;
 
 	
 
-	/**
-	 * Handles the "Register New Appointment" form (register-appointment.jsp).
-	 * The Appointment ID is generated here on the server rather than trusted from
-	 * the client, since the form field is display-only.
-	 */
+	
 	
 
 	    private static final long serialVersionUID = 1L;
@@ -48,8 +44,7 @@ import java.nio.charset.StandardCharsets;
 	        String appDate = trim(request.getParameter("appDate"));
 	        String appTime = trim(request.getParameter("appTime"));
 
-	        // Basic server-side validation (the browser's "required" attributes can be bypassed)
-	        if (isEmpty(patientName) || isEmpty(address) || isEmpty(contact)
+	         if (isEmpty(patientName) || isEmpty(address) || isEmpty(contact)
 	                || isEmpty(dentist) || isEmpty(treatment) || isEmpty(appDate) || isEmpty(appTime)) {
 	            response.sendRedirect(context + "/register-appointment.jsp?error=1");
 	            return;
@@ -69,7 +64,6 @@ import java.nio.charset.StandardCharsets;
 	    @Override
 	    protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	            throws ServletException, IOException {
-	        // This form must be submitted via POST; redirect stray GETs back to the form.
 	        response.sendRedirect(request.getContextPath() + "/register-appointment.jsp");
 	    }
 

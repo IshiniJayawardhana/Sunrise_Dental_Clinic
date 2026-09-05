@@ -12,11 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-	/**
-	 * Looks up an appointment by ID for display.jsp's search box.
-	 * Sets request attributes "appointment" (null if not found) and "searchId",
-	 * then forwards to display.jsp to render the result.
-	 */
+	
 	@WebServlet("/DisplayAppointmentServlet")
 	public class DisplayAppointmentServlet extends HttpServlet {
 

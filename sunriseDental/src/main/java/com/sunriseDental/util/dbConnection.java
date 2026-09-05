@@ -46,11 +46,10 @@ public final class dbConnection {
     }
 
     private dbConnection() {
-        // static utility class
+       
     }
 
-    /** Opens a new JDBC connection using the settings from db.properties. */
-    public static Connection getConnection() throws SQLException {
+     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(url, username, password);
     }
 }
