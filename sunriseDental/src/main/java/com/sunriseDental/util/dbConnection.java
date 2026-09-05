@@ -7,34 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- * Central place for obtaining a JDBC connection to the clinic database.
- *
- * Configuration comes from db.properties on the classpath
- * (WEB-INF/classes/db.properties), so nothing here needs to change between
- * environments — only that file.
- *
- * Usage (always in try-with-resources so the connection is returned/closed):
- *
- *   try (Connection conn = DBConnection.getConnection();
- *        PreparedStatement ps = conn.prepareStatement(
- *              "SELECT * FROM appointments WHERE appointment_id = ?")) {
- *       ps.setString(1, appointmentId);
- *       try (ResultSet rs = ps.executeQuery()) {
- *           if (rs.next()) {
- *               // map row to an Appointment object
- *           }
- *       }
- *   } catch (SQLException e) {
- *       throw new RuntimeException("Database error", e);
- *   }
- *
- * NOTE: This opens a brand-new connection per call, which is fine for
- * learning/small deployments. For production traffic, swap this class's
- * internals for a connection pool (HikariCP, Tomcat JDBC, or a container
- * DataSource looked up via JNDI) — callers don't need to change since they
- * only ever call DBConnection.getConnection().
- */
+
 public final class dbConnection {
 
     private static final String CONFIG_FILE = "db.properties";

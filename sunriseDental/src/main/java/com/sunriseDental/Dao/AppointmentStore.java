@@ -1,12 +1,11 @@
-package com.sunriseDental.controller;
+package com.sunriseDental.Dao;
 
-import com.sunriseDental.model.Appointment;
+	import com.sunriseDental.model.Appointment;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
+	import java.util.Map;
+	import java.util.concurrent.ConcurrentHashMap;
+	import java.util.concurrent.atomic.AtomicInteger;
 
-public class AppointmentStore {
 	/**
 	 * Temporary in-memory "database" so the app is fully functional out of the box.
 	 *a
@@ -67,5 +66,4 @@ public class AppointmentStore {
 	    }
 	}
 
-	
 }
